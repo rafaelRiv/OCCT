@@ -29,6 +29,24 @@
             default = occt;
           }
         );
+        devShells = forAllSystems(system: 
+          let pkgs = nixpkgs.legacyPackages.${system};
+          in {
+            default = pkgs.mkShell {
+              packages = [
+                  pkgs.tcl
+                  pkgs.tk
+                  pkgs.libGL
+                  pkgs.libGLU
+                  pkgs.libxext
+                  pkgs.libxi
+                  pkgs.rapidjson
+                  pkgs.cmake
+                  pkgs.doxygen
+              ];
+            };
+          }
+        ); 
      };
 
 }
