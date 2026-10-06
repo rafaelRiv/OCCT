@@ -18,6 +18,9 @@
                 buildInputs = [
                   pkgs.tcl
                   pkgs.tk
+									pkgs.freetype
+									pkgs.fontconfig
+									pkgs.expat
                   pkgs.libGL
                   pkgs.libGLU
                   pkgs.libxext
